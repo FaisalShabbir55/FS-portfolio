@@ -1,0 +1,122 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+    overflow-x: hidden;
+}
+
+
+.home{
+    height: 135vh;
+    width: 100vw;
+    background: url(Images/bg-img.jpg) no-repeat center;
+    background-size: cover;
+}
+
+header{
+    height: 65px;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.logo{
+    padding: 20px;
+}
+
+.menu ul li{
+    display: inline-block;
+    padding: 20px 14px;
+    font-size: 16px;
+}
+
+.phone{
+    padding: 20px 14px;
+    display: flex;
+}
+
+.phone i{
+    padding-right: 15px;
+}
+
+
+.hero{
+    display: flex;
+}
+
+.hero .intro{
+    justify-content: center;
+    align-items: center;
+    padding: 80px 100px;
+    width: 55vw;
+
+}
+.intro h2{
+    color: #fec544;
+    font-size: 28px;
+}
+.intro h1{
+    font-size: 80px;
+}
+.intro h3{
+    color: #a9adb8;
+    font-size: 34px;
+    padding: 10px 0px;
+}
+.hireBtn{
+    color:black;
+    background-color: #fec544;
+    border-radius: 25px;
+    padding: 15px 50px;
+    margin-top: 26px;
+    border: none;
+    
+}
+
+
+
+.ProfileImg {
+    position: relative;
+    overflow: hidden;
+    left: 4%;
+}
+
+.ProfileImg img {
+    max-width: 100%; /* Make the image larger to ensure part of it is hidden initially */
+    height: auto;
+    position: relative;
+    transform: translateX(0%); /* Start with half the image hidden */
+    transition: transform 0.5s ease-out; /* Smooth transition for the movement */
+    z-index: 1;
+}
+
+/* Ensure the social group is positioned relative to the ProfileImg */
+.st-social-group {
+    background-color: #101624;
+    border: 1px solid #232935;
+    border-radius: 50px 0 0 50px;
+    height: 80px;
+    width: 448px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 40px;
+    left: 15%; /* Stick to the left side of the profile image */
+    transform: translateX(0%); /* Adjust based on scroll */
+    transition: transform 0.5s ease-out;
+}
+
+.btn:hover, .st-social-link .st-social-btn.active {
+    padding-right: 15px;
+}
+
+.st-social-link .st-social-btn {
+    border-radius: 50px;
+    background-color: #070d1b;
+    border: 0.5px solid #3f4551;
+    transition: all 0.4s ease;
+    overflow: hidden;
+    align-items: center;
+    z-index: 999;
+}

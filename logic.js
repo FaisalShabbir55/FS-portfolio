@@ -10,10 +10,8 @@ window.addEventListener('scroll', function() {
     const socialGroup = document.querySelector('.st-social-group');
     const scrollPosition = window.scrollY;
     
-    // Control the amount of translation (adjust 100 for more/less movement)
-    const translateValue = scrollPosition / 2; // Adjust for desired movement speed
+    const translateValue = scrollPosition / 2;
 
-    // Apply the transform based on scroll position
     img.style.transform = `translateX(${translateValue}px)`;
     if (socialGroup) {
         socialGroup.style.transform = `translateX(${translateValue}px)`;
@@ -21,6 +19,14 @@ window.addEventListener('scroll', function() {
 });
 
 
-
-
+document.addEventListener('DOMContentLoaded', () => {
+    const socialButtons = document.querySelectorAll('.socialBtn');
+    socialButtons[0].classList.add('active');
+    socialButtons.forEach(button => {
+        button.addEventListener('mouseenter', () => {
+            socialButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+        });
+    });
+});
 

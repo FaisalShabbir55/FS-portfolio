@@ -8,8 +8,8 @@
 
 
 .home{
-    height: 130vh;
-    width: 100vw;
+    height: 129vh;
+    width: 100%;
     background: url(Images/bg-img.jpg) no-repeat center;
     background-size: cover;
 }
@@ -85,7 +85,6 @@ header{
 .ProfileImg {
     position: relative;
     overflow: hidden;
-    right: 2%;
 }
 
 .ProfileImg img {
@@ -176,6 +175,7 @@ header{
 }
 
 .bigHeading {
+    padding: 0px 0px;
     text-align: center;
     font-size: 100px;
     color: rgba(28, 34, 48, 0.5);
@@ -237,14 +237,11 @@ header{
 }
 
 .aboutImg img{
-    width: 40vw;
-    height: 100vh;
-}
-
-.aboutData{
-    width: 70%;
-    position: relative;
-    left: 30px;
+    text-align: center;
+    align-items: center;
+    margin-right: 30px;
+    width: 80%;
+    height: 80%;
 }
 
 .aboutData h3{
@@ -310,6 +307,7 @@ header{
 
 .skillSection{
     background-color: #101624;
+    padding-bottom: 30px;
 }
 
 .skillInfo{
@@ -388,6 +386,7 @@ header{
 
 .ResumeSection{
     background-color: #030c16;
+    padding-bottom: 30px;
 }
 
 
@@ -509,10 +508,12 @@ header{
 
 .reviewsSection{
     background-color: #070d1b;
+    padding-bottom: 50px;
 }
 
 .reviewsBoxes{
     display: flex;
+    
 }
 
 .reviewText{
@@ -521,7 +522,7 @@ header{
     margin-bottom: 40px;
     border-radius: 3px;
     transition: 0.4s;
-    padding: 30px 0px;
+    padding: 30px 15px;
     border-width: 1px;
     border-style: solid;
     border-color: rgb(35, 41, 53);
@@ -536,29 +537,22 @@ header{
     z-index: 1;
 }
 
-.reviewText::after {
+/* .reviewText::after {
     content: "";
     position: absolute;
     width: 30px;
     height: 30px;
     left: 50%;
     bottom: -16px;
-    transform: translateX(-50%) rotate(45deg);
     border-style: solid;
     border-color: rgb(35, 41, 53);
     border-image: initial;
     border-width: 0px 1px 1px 0px;
     background: rgb(16, 22, 36);
     transition: 0.4s;
-}
+} */
 
-.st-testimonial.st-style1 .st-testimonial-info {
-    align-items: center;
-    text-align: center;
-    margin-bottom: -4px;
-}
-
-.st-testimonial.st-style1 .st-testimonial-img {
+.reviewImg{
     height: 90px;
     width: 90px;
     flex: 0 0 auto;
@@ -566,13 +560,187 @@ header{
     margin: auto auto 20px;
 }
 
-.st-testimonial.st-style1 .st-testimonial-name {
+.st-testimonial-meta h4, h5{
     font-size: 20px;
     font-weight: 400;
     margin-bottom: 4px;
     transition: 0.4s;
+    line-height: 1.3em;
+    text-align: center;
+    
+}
+.st-testimonial-meta h5{
+    font-size: 16px;   
 }
 
-.st-testimonial.st-style1 .st-testimonial-designation {
-    line-height: 1.3em;
+
+
+.reviewOne:hover, .reviewTwo:hover ,.reviewThree:hover{
+    
+    .reviewText{
+        border: 1px solid yellow;
+    }
+    
+    .st-testimonial-meta h4{
+        color: yellow;
+        transition: 0.4s;
+    }
+}
+
+
+/* -------------------------------------- */
+
+.blog{
+    background-color: #151b29;
+    padding-bottom: 80px;
+}
+.adminDate, .adminDate{
+    color: #a9adb8;
+}
+.adminDate a, .adminDate span{
+    color: #fec544;
+
+}
+.blogText a{
+    background-color: transparent;
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s;
+}
+
+
+
+/* ------------------------------------------ */
+
+.contact{
+    background-color: #030c16;
+    padding-bottom: 30px;
+}
+.contactTitle{
+    font-size: 30px;
+    font-weight: 400;
+    margin-top: -6px;
+    margin-bottom: 22px;
+}
+
+form {
+    display: block;
+    margin-top: 0em;
+    unicode-bidi: isolate;
+}
+
+.st-form-field input, .st-form-field textarea {
+    display: block;
+    width: 100%;
+    color: rgb(169, 173, 184);
+    background-color: rgb(16, 22, 36);
+    height: 52px;
+    padding: 12px 20px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(35, 41, 53);
+    border-image: initial;
+    border-radius: 7px;
+    transition: 0.4s;
+}
+
+.st-form-field{
+    padding: 16px 0px;
+}
+
+.st-form-field textarea {
+    height: 150px;
+}
+
+.contactText {
+    margin-top: -6px;
+    margin-bottom: 23px;
+    color: #a9adb8;
+}
+
+.contactInfo {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+.contactInfo a, span, h4{
+    color: #a9adb8;
+    text-decoration: none;
+}
+.contactInfo:hover, .contactInfo a:hover{
+    color: #fec544;
+    i{
+        border: 1px solid #fec544;
+    }
+}
+
+.st-social-info .st-social-text {
+    margin-top: 0px;
+    margin-bottom: 25px;
+    font-size: 20px;
+    font-weight: 500;
+    padding-top: 5px;
+}
+.st-social-link {
+    display: flex;
+}
+.st-social-link .st-social-btn:hover, .st-social-link .st-social-btn.active {
+    padding-right: 55px;
+}
+.st-social-link .st-social-btn:not(:last-child) {
+    margin-right: 20px;
+}
+
+.st-social-link .st-social-btn {
+    background-color: rgb(7, 13, 27);
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    border-width: 0.5px;
+    border-style: solid;
+    border-color: rgb(63, 69, 81);
+    border-image: initial;
+    transition: 0.4s;
+    overflow: hidden;
+}
+
+.st-social-link .st-social-btn .st-social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 50px;
+    transition: 0.4s;
+}
+.st-social-link .st-social-btn .st-icon-name {
+    font-weight: 600;
+    color: rgb(253, 254, 255);
+    max-width: 0px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.contactInfo i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(7, 13, 27);
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    border-width: 0.5px;
+    border-style: solid;
+    border-color: rgb(63, 69, 81);
+    border-image: initial;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+.footer{
+    margin-bottom: -1px;
+    padding-bottom: 20px;
+    background-color: #030c16;
+    text-align: center;
+    color: #a9adb8;
 }

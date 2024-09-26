@@ -30,3 +30,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+
+// Get all links in the menu
+const menuLinks = document.querySelectorAll('.menu ul li a');
+
+// Add click event listener to each link
+menuLinks.forEach(link => {
+    link.addEventListener('click', function() {
+        // Remove active class from all links
+        menuLinks.forEach(link => link.classList.remove('active'));
+        
+        // Add active class to the clicked link
+        this.classList.add('active');
+    });
+});
+

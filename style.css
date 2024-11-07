@@ -668,17 +668,19 @@ header{
 
 
 
-.reviewOne:hover, .reviewTwo:hover ,.reviewThree:hover{
-    
-    .reviewText{
-        border: 1px solid yellow;
-    }
-    
-    .st-testimonial-meta h4{
-        color: yellow;
-        transition: 0.4s;
-    }
+.reviewOne:hover .reviewText,
+.reviewTwo:hover .reviewText,
+.reviewThree:hover .reviewText {
+    border: 1px solid yellow;
 }
+
+.reviewOne:hover .st-testimonial-meta h4,
+.reviewTwo:hover .st-testimonial-meta h4,
+.reviewThree:hover .st-testimonial-meta h4 {
+    color: yellow;
+    transition: 0.4s;
+}
+
 
 
 /* -------------------------------------- */

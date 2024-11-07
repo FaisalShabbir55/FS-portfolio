@@ -221,6 +221,17 @@ header{
     left: 50%;
     transform: translateX(-50%);
 }
+
+.smallHeading::before{
+    content: "";
+    position: absolute;
+    background-color: #3f4551;
+    width: 170px;
+    height: 2px;
+    bottom: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+}
 .smallHeading::after{
     content: "";
     position: absolute;
@@ -396,7 +407,7 @@ header{
 .resumeHeading img{
         border: 0;
         max-width: 100%;
-        height: 35px;
+        height: auto;
 }
 
 .resumeHeading .resumeHeading-title {
@@ -668,11 +679,6 @@ header{
 
 
 
-.reviewOne:hover .reviewText,
-.reviewTwo:hover .reviewText,
-.reviewThree:hover .reviewText {
-    border: 1px solid yellow;
-}
 
 .reviewOne:hover .st-testimonial-meta h4,
 .reviewTwo:hover .st-testimonial-meta h4,
@@ -680,6 +686,7 @@ header{
     color: yellow;
     transition: 0.4s;
 }
+
 
 
 
@@ -789,7 +796,6 @@ form {
 .contactInfo a:hover i {
     border: 1px solid #fec544;
 }
-
 
 .contactInfo i {
     display: flex;
